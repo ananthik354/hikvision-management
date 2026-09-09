@@ -1,0 +1,185 @@
+.topbar {
+  height: 70px;
+
+  position: fixed;
+
+  top: 0;
+  left: 260px;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  background: white;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  z-index: 100;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #4b5563;
+
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: #f3f4f6;
+}
+
+.page-title {
+  margin-left: 12px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* Notification */
+
+.notification-button {
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #4b5563;
+
+  cursor: pointer;
+}
+
+.notification-button:hover {
+  background: #f3f4f6;
+}
+
+.notification-badge {
+  position: absolute;
+
+  top: 3px;
+  right: 3px;
+
+  min-width: 17px;
+  height: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4px;
+
+  border-radius: 20px;
+
+  background: #ef4444;
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* =========================
+   USER
+========================= */
+
+.user-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 6px 8px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.user-profile:hover {
+  background: #f3f4f6;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.user-role {
+  margin-top: 2px;
+
+  font-size: 11px;
+
+  color: #6b7280;
+}
+
+.user-arrow {
+  margin-left: 3px;
+
+  color: #6b7280;
+}

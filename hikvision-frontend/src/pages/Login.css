@@ -1,0 +1,247 @@
+
+/* ================================
+   Login Page
+================================ */
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f6f8;
+    position: relative;
+}
+
+
+/* ================================
+   Login Card
+================================ */
+
+.login-card {
+    width: 380px;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.login-card h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   Form
+================================ */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.1);
+}
+
+
+/* ================================
+   Login Button
+================================ */
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #198754;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-card button:hover {
+    background: #157347;
+}
+
+.login-card button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+
+/* ================================
+   Error Message
+================================ */
+
+.error-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ffe5e5;
+    color: #d00000;
+    font-size: 14px;
+}
+
+
+/* ================================
+   Toast
+================================ */
+
+.login-toast {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+
+    min-width: 300px;
+    max-width: 400px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    border-radius: 8px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.18);
+
+    z-index: 9999;
+
+    animation:
+        toastSlideIn 0.35s ease-out;
+}
+
+
+/* Success Toast */
+
+.toast-success {
+    border-left: 5px solid #198754;
+}
+
+
+/* Error Toast */
+
+.toast-error {
+    border-left: 5px solid #dc3545;
+}
+
+
+/* Toast Icon */
+
+.toast-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* Success Icon */
+
+.toast-success .toast-icon {
+    background: #198754;
+}
+
+
+/* Error Icon */
+
+.toast-error .toast-icon {
+    background: #dc3545;
+}
+
+
+/* Toast Content */
+
+.toast-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.toast-content strong {
+    font-size: 15px;
+    color: #333;
+}
+
+.toast-content span {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* ================================
+   Toast Animation
+================================ */
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 500px) {
+
+    .login-card {
+        width: calc(100% - 40px);
+        padding: 25px;
+    }
+
+    .login-toast {
+        top: 15px;
+        right: 15px;
+        left: 15px;
+
+        min-width: auto;
+        max-width: none;
+    }
+}
